@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5N6-yw-6YO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NewsApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VcC-13-Mxz">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VcC-13-Mxz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="LgJ-nT-dGd"/>
+                            <constraint firstItem="VcC-13-Mxz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WTO-qt-wG8"/>
+                            <constraint firstItem="VcC-13-Mxz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cC2-sy-9k9"/>
+                            <constraint firstItem="VcC-13-Mxz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="q3Y-d2-7Pd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="News" id="RUR-Po-1DH"/>
+                    <connections>
+                        <outlet property="tableView" destination="VcC-13-Mxz" id="DrZ-7t-f9L"/>
+                        <segue destination="Fin-r7-aPi" kind="show" identifier="detailSegue" id="bNE-eD-3W1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="71.651785714285708"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="npQ-u9-WI1">
+            <objects>
+                <viewController id="Fin-r7-aPi" customClass="DetailViewController" customModule="NewsApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="93o-Tf-eEz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMi-ub-emn">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oh4-z8-Jwm" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e61-2M-Q6M" customClass="CustomImage" customModule="NewsApps" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="20" width="374" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="5HE-Od-6XN"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="KCE-qw-6yZ">
+                                                <rect key="frame" x="20" y="290" width="374" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JPNN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxa-z1-Vu9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="62" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday, 28-12-2020 12:29:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWu-AA-feZ">
+                                                        <rect key="frame" x="62" y="0.0" width="312" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Satgas Covid-19 Pantau Pengungsi Gunung Merapi" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkV-XM-SW7">
+                                                <rect key="frame" x="20" y="324" width="374" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="vke-IC-PZW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCh-43-6fc">
+                                                <rect key="frame" x="20" y="390" width="374" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="en8-1X-FPj"/>
+                                                </constraints>
+                                                <string key="text">Komisi Pemberantasan Korupsi (KPK) menyita sebuah ruko di kawasan Pejaten, Jakarta Selatan. Penyitaan dilakukan terkait prosedls penyidikan kasus dugaan korupsi pengadaan Citra Satelit Resolusi Tinggi (CSRT) di Badan Informasi Geospasial (BIG) bersama Lembaga Penerbangan dan Antariksa Nasional (LAPAN) pada 2015. "Tim penyidik KPK pada Rabu kemarin telah melakukan penyitaan dan pemasangan plang penyitaan berdasarkan izin Dewas KPK, pada sebuah ruko yang berlokasi di daerah Pejaten, Jakarta Selatan," kata Plt Juru Bicara KPK Ali Fikri melalui keterangan yang diterima, Senin (28/12). Fikri menambahkan, barang bukti akan dianalisis lebih lanjut oleh tim penyidik. Ruko juga dikonfirmasi kepada saksi-saksi yang terkait dengan perkara ini. Selain itu, Fikri menambahkan, KPK juga menjadwalkan pemeriksaan terhadap dua saksi, yaitu Gregorius. </string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1Y-G2-3Pz">
+                                                <rect key="frame" x="282" y="630" width="112" height="38"/>
+                                                <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="1MX-CL-7sf"/>
+                                                    <constraint firstAttribute="width" constant="112" id="nF8-PJ-eOj"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Source">
+                                                    <color key="baseForegroundColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btnSource:" destination="Fin-r7-aPi" eventType="touchUpInside" id="E9t-E5-wCs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="N1Y-G2-3Pz" firstAttribute="top" secondItem="QCh-43-6fc" secondAttribute="bottom" constant="40" id="4TL-CZ-rGI"/>
+                                            <constraint firstAttribute="trailing" secondItem="KCE-qw-6yZ" secondAttribute="trailing" constant="20" id="BY1-xn-rsA"/>
+                                            <constraint firstAttribute="trailing" secondItem="N1Y-G2-3Pz" secondAttribute="trailing" constant="20" id="CQ7-BK-OOj"/>
+                                            <constraint firstItem="KCE-qw-6yZ" firstAttribute="leading" secondItem="oh4-z8-Jwm" secondAttribute="leading" constant="20" id="LeX-OB-Qa7"/>
+                                            <constraint firstItem="e61-2M-Q6M" firstAttribute="leading" secondItem="oh4-z8-Jwm" secondAttribute="leading" constant="20" id="OIn-o0-hdl"/>
+                                            <constraint firstAttribute="trailing" secondItem="QCh-43-6fc" secondAttribute="trailing" constant="20" id="ST7-1Q-BZs"/>
+                                            <constraint firstItem="KCE-qw-6yZ" firstAttribute="top" secondItem="e61-2M-Q6M" secondAttribute="bottom" constant="20" id="Ufj-gA-K7N"/>
+                                            <constraint firstItem="QCh-43-6fc" firstAttribute="leading" secondItem="oh4-z8-Jwm" secondAttribute="leading" constant="20" id="Ve6-AW-L11"/>
+                                            <constraint firstItem="mkV-XM-SW7" firstAttribute="top" secondItem="KCE-qw-6yZ" secondAttribute="bottom" constant="13.5" id="YV2-ku-96i"/>
+                                            <constraint firstItem="e61-2M-Q6M" firstAttribute="top" secondItem="oh4-z8-Jwm" secondAttribute="top" constant="20" id="amT-ep-3Pr"/>
+                                            <constraint firstItem="mkV-XM-SW7" firstAttribute="leading" secondItem="oh4-z8-Jwm" secondAttribute="leading" constant="20" id="b4l-uW-TKX"/>
+                                            <constraint firstAttribute="height" constant="852" id="i6h-hi-0WH"/>
+                                            <constraint firstAttribute="trailing" secondItem="mkV-XM-SW7" secondAttribute="trailing" constant="20" id="lsV-cA-5WC"/>
+                                            <constraint firstAttribute="trailing" secondItem="e61-2M-Q6M" secondAttribute="trailing" constant="20" id="tbW-QJ-9fj"/>
+                                            <constraint firstItem="QCh-43-6fc" firstAttribute="top" secondItem="mkV-XM-SW7" secondAttribute="bottom" constant="10" id="x4E-Tm-ReS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="oh4-z8-Jwm" secondAttribute="trailing" id="26r-hb-TVE"/>
+                                    <constraint firstItem="oh4-z8-Jwm" firstAttribute="leading" secondItem="CMi-ub-emn" secondAttribute="leading" id="3fO-0K-OBM"/>
+                                    <constraint firstItem="oh4-z8-Jwm" firstAttribute="top" secondItem="CMi-ub-emn" secondAttribute="top" id="cCT-q4-ahW"/>
+                                    <constraint firstAttribute="bottom" secondItem="oh4-z8-Jwm" secondAttribute="bottom" id="sBA-JA-Pt7"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MdY-HZ-dVs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oh4-z8-Jwm" firstAttribute="width" secondItem="93o-Tf-eEz" secondAttribute="width" id="IrS-MH-Q9w"/>
+                            <constraint firstItem="CMi-ub-emn" firstAttribute="top" secondItem="MdY-HZ-dVs" secondAttribute="top" id="ThH-Se-TVb"/>
+                            <constraint firstItem="CMi-ub-emn" firstAttribute="trailing" secondItem="MdY-HZ-dVs" secondAttribute="trailing" id="ddG-Yq-H1c"/>
+                            <constraint firstAttribute="bottom" secondItem="CMi-ub-emn" secondAttribute="bottom" id="fSZ-lk-Jsf"/>
+                            <constraint firstItem="CMi-ub-emn" firstAttribute="leading" secondItem="MdY-HZ-dVs" secondAttribute="leading" id="kaO-8J-BvQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NMu-Rv-cWI"/>
+                    <connections>
+                        <outlet property="contentNews" destination="QCh-43-6fc" id="s3K-eC-AND"/>
+                        <outlet property="dateNews" destination="yWu-AA-feZ" id="e9F-FX-CxM"/>
+                        <outlet property="imNews" destination="e61-2M-Q6M" id="aWP-lI-izL"/>
+                        <outlet property="mediaNews" destination="dxa-z1-Vu9" id="FGj-Kj-dJv"/>
+                        <outlet property="titleNews" destination="mkV-XM-SW7" id="b4F-dN-5DV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2R-4v-LG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805.7971014492755" y="76.339285714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pJP-fj-Lta">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5N6-yw-6YO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ERU-xR-h7p">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DHH-Wf-jHA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OBs-Qb-uTu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
